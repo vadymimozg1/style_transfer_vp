@@ -24,6 +24,9 @@ import random
 app = Flask(__name__)    
 
 
+
+#MODEL_FOLDER = 'C:/Users/mozgo/Documents/Studies/Spec_Cloud/course_2/my_application_v4'
+
 MODEL_FOLDER = ''
 
 
@@ -97,25 +100,9 @@ def get_output1():
 
     return render_template("predict.html", img_path_content = img_path_content, img_path_style = img_path_style, img_path_generated = img_path_generated, file_name_gen=file_name_gen)
 
-    
-   #return render_template("predict.html", img_path_content = img_path_content, img_path_style = img_path_style, img_path_generated = img_path_generated, file_name_gen=file_name_gen)
 
-def create_app():
-    return app
-
-
-if __name__ == '__main__':
-    app = create_app()
-    app.run()
-    
-
-# def create_app():
-#     load__model()
-#     return app
-
-
-# if __name__ == '__main__':
-#     app = create_app()
-#     app.run()
+if __name__ =='__main__':
+	#app.debug = True
+	app.run()
 
 # debug = True
