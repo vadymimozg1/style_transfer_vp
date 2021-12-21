@@ -1,0 +1,145 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <!-- <title>Image Classification 123 </title> -->
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=2">  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <style>
+    
+    * {
+      box-sizing: border-box;
+    }
+    
+    .column {
+      float: center;
+      width: 33.33%;
+      padding: 10px;
+    }
+    
+    /* Clearfix (clear floats) */
+    .row::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+
+    .btn {
+  background-color: DodgerBlue;
+  border: none;
+  color: white;
+  padding: 12px 30px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/* Darker background on mouse-over */
+.btn:hover {
+  background-color: RoyalBlue;
+}
+
+#hp  {
+float: left;    
+ margin: 0 15px 0 0;
+}
+
+.caption {
+    text-align: center;
+    font-size: larger;
+}
+
+p.ex1 {
+  margin-left: 40px;
+}
+
+.aligncenter {
+    text-align: center;
+}
+
+.container{   
+    text-align: center;
+}
+.category{
+    display: inline-block;
+    background: #ccc;
+    margin: 5px;
+}
+    </style>
+</head>
+<body>
+
+<div class="container">
+  <h1 class="jumbotron bg-primary">Neural Style Transfer - Download
+  <br> <font size="+1">  Right-click to download generated image (Image # 3: Stylized)! </font>
+ </h1>
+<div class="container">
+    
+    <div class="category">
+      <img id="picture" src="data:image/jpeg;base64,{{ img_data_1 }}" alt="P2" height="300px" width="300px">       
+   <!--   <img src="{{img_path_content}}" alt="P1" height="300px" width="300px"> -->
+      <div class="caption">Image # 1: Content   </div>  
+    
+    </div>
+    <div class="category">
+     <img id="picture" src="data:image/jpeg;base64,{{ img_data_2 }}" alt="P2" height="300px" width="300px">    
+      <div class="caption">Image # 2: Style Reference   </div>
+    </div>
+  
+</div>
+ 
+  <br><br>
+<div class="container">  
+    <div class="category">
+ 
+      <img id="picture" src="data:image/jpeg;base64,{{ img_data_3 }}" alt="centered image">    
+      <div class="caption">Image # 3: Stylized   </div>
+    </div>
+
+</p> 
+   
+ 
+
+
+
+<form class="form-horizontal" action="/submit" method="post" enctype="multipart/form-data">
+  <br><br>
+  <!-- <br><br> -->
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="pwd">Upload Content Image:</label>
+      <div class="col-sm-10">          
+        <input type="file" class="form-control" placeholder="Hours Studied"  name="my_image1" id="pwd">
+      </div>
+
+      <label class="control-label col-sm-2" for="pwd">Upload Style Image:</label>
+      <div class="col-sm-10">          
+        <input type="file" class="form-control" placeholder="Hours Studied"  name="my_image2" id="pwd">
+      </div>
+    
+    </div>
+
+    <div class="form-group">      
+      <div class="col-sm-offset-2 col-sm-10">
+        <button type="submit" class="btn btn-success">Submit</button>
+      </div>
+    </div>
+  </form>
+  
+  <br>
+  <!-- <p class="ex1">  -->
+  <div style="text-align: center;">
+  <a href="/">Back to Home Page</a>
+  </div>
+  <br>
+  <!-- </p>  -->
+
+</body>
+</html>
+
+
+
+
+
+
+
