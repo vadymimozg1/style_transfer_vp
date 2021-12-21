@@ -135,5 +135,5 @@ def get_output1():
     return render_template("predict.html", img_data_1 = img_data_1, img_data_2 = img_data_2, img_data_3 = img_data_3)
 
 
-if __name__ =='__main__':
-	app.run()
+#if __name__ =='__main__':
+#	app.run()
